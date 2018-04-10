@@ -74,13 +74,11 @@ struct String {
 	}
 	//перемещающий конструктор
 	String(String && s) {
-		std::cout << "Move Constructor" << std::endl;
 		swap(s);
 	}
 	//перемещающий оператор присваивания
 	String & operator=(String && s) {
 		swap(s);
-		std::cout << "Move Operator = " << std::endl;
 		return *this;
 	}
 
