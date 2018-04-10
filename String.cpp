@@ -90,13 +90,5 @@ struct String {
 
 int main() {
 	
-	String s1 = String("Hellow");
-	String s2("world");
-	//String s3 = s1 + ", " + s2 + " !";
-	String s3("Helow, world!");
-	String s4 = s3;
-	s1 = std::move(s4);
-	s2 = String(s1);
-	
 	return 0;
 }
