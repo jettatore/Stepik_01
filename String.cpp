@@ -88,9 +88,6 @@ struct String {
 	char *str = nullptr;
 };
 
-
-
-
 int main() {
 	
 	String s1 = String("Hellow");
@@ -100,7 +97,6 @@ int main() {
 	String s4 = s3;
 	s1 = std::move(s4);
 	s2 = String(s1);
-		
 	
 	return 0;
 }
