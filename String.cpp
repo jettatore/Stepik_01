@@ -51,13 +51,13 @@ struct String {
 	};
 
 	/*
-	//перемещающий конструктор
+	//РїРµСЂРµРјРµС‰Р°СЋС‰РёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	String(String && s) :size(s.size), str(s.str) {
 		s.str = nullptr;
 		s.size = 0;
 	}
 
-	//перемещающий оператор присваивания
+	//РїРµСЂРµРјРµС‰Р°СЋС‰РёР№ РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 	String & operator=(String && s) {
 		delete[]str;
 		str = s.str;
@@ -72,12 +72,12 @@ struct String {
 		std::swap(str, s.str);
 		std::swap(size, s.size);
 	}
-	//перемещающий конструктор
+	//РїРµСЂРµРјРµС‰Р°СЋС‰РёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	String(String && s) {
 		std::cout << "Move Constructor" << std::endl;
 		swap(s);
 	}
-	//перемещающий оператор присваивания
+	//РїРµСЂРµРјРµС‰Р°СЋС‰РёР№ РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 	String & operator=(String && s) {
 		swap(s);
 		std::cout << "Move Operator = " << std::endl;
